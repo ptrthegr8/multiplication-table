@@ -5,67 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>MULTIPLY</title>
     <style>
         body {
-            background-color:bisque;
+            background-color: whitesmoke;
+        }
+
+        table {
+            background-color: yellow;
+            margin: 0 auto;
         }
     </style>
 </head>
 
 <body>
-
     <div id="div1">
         <p></p>
     </div>
-    <div id="div2">
-        <table>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-            </tr>
-        </table>
-    </div>
-
     <script>
-    //     function createParagraph(text, properties) {
-	// create a paragraph tag with the appropriate text
-	//     var paragraph = document.createElement("p");
-    //     paragraph.textContent = text;
-    //     document.body.appendChild(paragraph);
-    //     }
+        var color;
+        document.write("<table border='5px'>");
 
+        for (var x = 1; x <= 10; x++) {
 
-        for (i = 1; i < 11; i++) {
-            for (j = 1; j < 11; j++) {
-                var para = document.createElement("p");
-                var node = document.createTextNode(i * j);
-                para.appendChild(node);
-                var element = document.getElementById("div1");
-                element.appendChild(para);
+            document.write("<tr style='height:50px;'>");
+
+            for (var y = 1; y <= 10; y++) {
+
+                if (y === 1 || x === 1) {
+                    color = "rebeccapurple";
+                } else {
+                    color = "green";
+                }
+
+                document.write("<td style='width:50px;background-color:" + color + "'>" + x * y + "</td>");
             }
+            document.write("</tr>");
         }
+
+        document.write("</table>");
     </script>
+
 
 </body>
 
